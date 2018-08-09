@@ -212,10 +212,9 @@ public final class Cockroach {
 
     /**
      * view measure layout draw时抛出异常会导致Choreographer挂掉
-     * <p>
      * 建议直接杀死app。以后的版本会只关闭黑屏的Activity
      *
-     * @param e
+     * @param e Throwable
      */
     private static void isChoreographerException(Throwable e) {
         if (e == null || sExceptionHandler == null) {

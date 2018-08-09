@@ -1,8 +1,9 @@
 package com.wanjian.demo;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +18,7 @@ import android.widget.Toast;
  * Created by wanjian on 2018/1/22.
  */
 
-public class SecondAct extends Activity {
+public class SecondAct extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class SecondAct extends Activity {
         recyclerView.addItemDecoration(decoration);
         recyclerView.setAdapter(new RecyclerView.Adapter() {
             @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item, recyclerView, false);
                 view.setTag(R.id.txt, view.findViewById(R.id.txt));
                 return new RecyclerView.ViewHolder(view) {
@@ -46,13 +47,14 @@ public class SecondAct extends Activity {
             }
 
             @Override
-            public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+            public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
                 ((TextView) holder.itemView.getTag(R.id.txt)).setText(String.valueOf(position));
 
+                final int pos = position;
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(SecondAct.this, "POSITION " + position, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SecondAct.this, "POSITION " + pos, Toast.LENGTH_SHORT).show();
                     }
                 });
                 if (position == 20) {

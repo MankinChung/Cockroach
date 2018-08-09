@@ -23,9 +23,34 @@ dependencies {
     implementation 'me.weishu:free_reflection:1.2.0'
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = "utf-8"
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    options.encoding = "UTF-8"
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
 //添加
 publish {
-    userOrg = 'Mankin'
+    userOrg = 'mankinchung'
     groupId = 'com.wanjian'
     artifactId = 'cockroach'
     publishVersion = '2.0.0'

@@ -1,10 +1,10 @@
 package com.wanjian.demo;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by wanjian on 2018/1/22.
  */
 
-public class UnknowAct extends Activity {
+public class UnknowAct extends AppCompatActivity {
 }

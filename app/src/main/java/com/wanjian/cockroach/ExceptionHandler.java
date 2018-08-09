@@ -41,8 +41,8 @@ public abstract class ExceptionHandler {
     /**
      * 子线程抛出异常时始终调用该方法。主线程只有第一次抛出异常时才会调用该方法，该方法中到的throwable都会上报到bugly。以后主线程的异常只调用 {@link #onBandageExceptionHappened(Throwable)}
      *
-     * @param thread
-     * @param throwable
+     * @param thread exception thread
+     * @param throwable Throwable
      */
     protected abstract void onUncaughtExceptionHappened(Thread thread, Throwable throwable);
 

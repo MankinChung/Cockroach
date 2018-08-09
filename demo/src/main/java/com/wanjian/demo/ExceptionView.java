@@ -3,6 +3,7 @@ package com.wanjian.demo;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Button;
  * Created by wanjian on 2018/5/29.
  */
 
-public class ExceptionView extends Button {
+public class ExceptionView extends AppCompatButton {
     boolean excep = false;
 
     public ExceptionView(Context context) {

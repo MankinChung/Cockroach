@@ -11,8 +11,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by wanjian on 2018/5/24.
- * <p>
- * <p>
+ *
  * handleDestroyActivity((IBinder)msg.obj, msg.arg1 != 0,msg.arg2, false);
  * ActivityManager.getService().finishActivity(mToken, resultCode, resultData, finishTask)
  */
