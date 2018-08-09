@@ -19,18 +19,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     //android 11
-    compile 'me.weishu:free_reflection:3.0.1'
+    implementation 'me.weishu:free_reflection:3.0.1'
 }
 
 //添加
 publish {
-//    userOrg = 'wanjiannotes'
+    userOrg = 'Mankin'
     groupId = 'com.wanjian'
     artifactId = 'cockroach'
-    publishVersion = '0.0.5'
+    publishVersion = '2.0.0'
     desc = '打不死的小强 , 永不crash的Android'
     website = 'https://github.com/android-notes/Cockroach'
 }
