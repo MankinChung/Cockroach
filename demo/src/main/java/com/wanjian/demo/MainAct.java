@@ -1,10 +1,10 @@
 package com.wanjian.demo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 
@@ -12,7 +12,7 @@ import android.view.View;
  * Created by wanjian on 2018/1/22.
  */
 
-public class MainAct extends Activity {
+public class MainAct extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

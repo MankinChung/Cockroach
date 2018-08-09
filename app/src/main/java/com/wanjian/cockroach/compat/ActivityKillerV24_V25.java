@@ -10,9 +10,9 @@ import java.lang.reflect.Method;
 
 /**
  * Created by wanjian on 2018/5/24.
- * <p>
+ *
  * android 7.1.1
- * <p>
+ *
  * ActivityManagerNative.getDefault().finishActivity(mToken, resultCode, resultData, finishTask))
  */
 

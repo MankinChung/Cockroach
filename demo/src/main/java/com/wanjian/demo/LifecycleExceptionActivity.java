@@ -1,9 +1,9 @@
 package com.wanjian.demo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -13,7 +13,7 @@ import java.util.Date;
  * Created by wanjian on 2018/5/19.
  */
 
-public class LifecycleExceptionActivity extends Activity {
+public class LifecycleExceptionActivity extends AppCompatActivity {
 
     public static final String METHOD = "method";
     private String exceptionPoint;
