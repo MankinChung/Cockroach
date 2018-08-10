@@ -14,6 +14,7 @@ import com.wanjian.cockroach.compat.ActivityKillerV28;
 import com.wanjian.cockroach.compat.IActivityKiller;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import me.weishu.reflection.Reflection;
 
@@ -99,7 +100,9 @@ public final class Cockroach {
         final int NEW_INTENT = 112;
         final int RELAUNCH_ACTIVITY = 126;
         Class activityThreadClass = Class.forName("android.app.ActivityThread");
-        Object activityThread = activityThreadClass.getDeclaredMethod("currentActivityThread").invoke(null);
+        Method method = activityThreadClass.getDeclaredMethod("currentActivityThread");
+        method.setAccessible(true);
+        Object activityThread = method.invoke(null);
 
         Field mhField = activityThreadClass.getDeclaredField("mH");
         mhField.setAccessible(true);

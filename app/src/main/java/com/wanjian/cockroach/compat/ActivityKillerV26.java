@@ -68,6 +68,7 @@ public class ActivityKillerV26 implements IActivityKiller {
 
     private void finish(IBinder binder) throws Exception {
         Method getServiceMethod = ActivityManager.class.getDeclaredMethod("getService");
+        getServiceMethod.setAccessible(true);
         Object activityManager = getServiceMethod.invoke(null);
 
         Method finishActivityMethod = activityManager.getClass().getDeclaredMethod("finishActivity", IBinder.class, int.class, Intent.class, int.class);

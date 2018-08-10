@@ -67,11 +67,12 @@ public class ActivityKillerV15_V20 implements IActivityKiller {
         Class activityManagerNativeClass = Class.forName("android.app.ActivityManagerNative");
 
         Method getDefaultMethod = activityManagerNativeClass.getDeclaredMethod("getDefault");
-
+        getDefaultMethod.setAccessible(true);
         Object activityManager = getDefaultMethod.invoke(null);
 
 
         Method finishActivityMethod = activityManager.getClass().getDeclaredMethod("finishActivity", IBinder.class, int.class, Intent.class);
+        finishActivityMethod.setAccessible(true);
         finishActivityMethod.invoke(activityManager, binder, Activity.RESULT_CANCELED, null);
 
     }
