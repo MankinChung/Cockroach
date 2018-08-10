@@ -53,7 +53,7 @@ publish {
     userOrg = 'mankinchung'
     groupId = 'com.wanjian'
     artifactId = 'cockroach'
-    publishVersion = '2.0.0'
-    desc = '打不死的小强 , 永不crash的Android'
+    publishVersion = '2.0.1'
+    desc = 'Catch unnecessary crash for Android'
     website = 'https://github.com/android-notes/Cockroach'
 }
