@@ -53,9 +53,9 @@ artifacts {
 //添加
 publish {
     userOrg = 'mankinchung'
-    groupId = 'com.wanjian'
+    groupId = 'com.mankin8'
     artifactId = 'cockroach'
-    publishVersion = '2.0.1'
+    publishVersion = '2.0.0'
     desc = 'Catch unnecessary crash for Android'
     website = 'https://github.com/android-notes/Cockroach'
 }
