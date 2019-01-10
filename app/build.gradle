@@ -5,7 +5,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -55,7 +55,7 @@ publish {
     userOrg = 'mankinchung'
     groupId = 'com.mankin8'
     artifactId = 'cockroach'
-    publishVersion = '2.0.0'
+    publishVersion = '2.0.2'
     desc = 'Catch unnecessary crash for Android'
     website = 'https://github.com/android-notes/Cockroach'
 }
