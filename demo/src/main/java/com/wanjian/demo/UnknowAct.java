@@ -1,6 +1,6 @@
 package com.wanjian.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by wanjian on 2018/1/22.

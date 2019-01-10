@@ -2,12 +2,13 @@ package com.wanjian.demo;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by wanjian on 2018/5/19.
