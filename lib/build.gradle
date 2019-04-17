@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'//添加
+apply plugin: 'com.github.dcendents.android-maven'//添加
+
+group = 'com.mankinc'
 
 android {
     compileSdkVersion 28
@@ -35,9 +37,10 @@ task sourcesJar(type: Jar) {
 }
 
 task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    options.encoding = "UTF-8"
+    classpath += configurations.compile
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
@@ -48,14 +51,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}
-
-//添加
-publish {
-    userOrg = 'mankinchung'
-    groupId = 'com.mankin8'
-    artifactId = 'cockroach'
-    publishVersion = '2.0.2'
-    desc = 'Catch unnecessary crash for Android'
-    website = 'https://github.com/android-notes/Cockroach'
 }
