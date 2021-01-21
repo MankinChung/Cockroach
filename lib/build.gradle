@@ -22,9 +22,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     //android 11
-    implementation 'me.weishu:free_reflection:3.0.1'
+    api 'me.weishu:free_reflection:3.0.1'
 }
 
 tasks.withType(JavaCompile) {
