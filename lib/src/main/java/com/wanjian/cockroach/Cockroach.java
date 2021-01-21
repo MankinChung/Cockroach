@@ -74,11 +74,9 @@ public final class Cockroach {
             sActivityKiller = new ActivityKillerV26();
         } else if (Build.VERSION.SDK_INT == 25 || Build.VERSION.SDK_INT == 24) {
             sActivityKiller = new ActivityKillerV24_V25();
-        } else if (Build.VERSION.SDK_INT >= 21 && Build.VERSION.SDK_INT <= 23) {
+        } else if (Build.VERSION.SDK_INT >= 21) {
             sActivityKiller = new ActivityKillerV21_V23();
-        } else if (Build.VERSION.SDK_INT >= 15 && Build.VERSION.SDK_INT <= 20) {
-            sActivityKiller = new ActivityKillerV15_V20();
-        } else if (Build.VERSION.SDK_INT < 15) {
+        } else {
             sActivityKiller = new ActivityKillerV15_V20();
         }
 
